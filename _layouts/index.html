@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        <div class="index-header">
+            <div class="row logo"><h1>Dan Visintainer</h1></div>
+            <div class="row header-links">
+                <span class="header-link"><a href="">Words</a></span>
+                <span class="header-link"><a href="">Photos</a></span>
+                <span class="header-link"><a href="">Projects</a></span>
+                <span class="header-link"><a href="">About</a></span>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            {{ content }}
+        </div>
+
+    {% include footer.html %}
+    </body>
+</html>

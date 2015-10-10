@@ -1,0 +1,45 @@
+/*
+*   Index Page Styles
+*/
+.index-header {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 75px 0px;
+
+    .logo h1 {
+        font-family: $logo-font-family, sans-serif;
+        color: $text-color;
+        font-size: 64px;
+        letter-spacing: 8px;
+    }
+
+    .header-links {
+        font-weight: bold;
+        a {
+            color: #888;
+        }
+
+        .header-link {
+            padding: 0px 7px 0px 3px;
+            border-right: 1px solid #CCC;
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+
+    @include media-query($on-phone) {
+        .logo h1 {
+            letter-spacing: 1px;
+            font-size: 38px;
+        }
+
+        .header-links {
+            font-size: 14px;
+        }
+
+    }
+}

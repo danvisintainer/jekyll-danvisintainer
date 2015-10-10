@@ -41,7 +41,7 @@
         }
     }
 
-    @include media-query($on-palm) {
+    @include media-query($on-phone) {
         position: absolute;
         top: 9px;
         right: 30px;
@@ -148,7 +148,7 @@
     }
 }
 
-@include media-query($on-palm) {
+@include media-query($on-phone) {
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
@@ -174,7 +174,13 @@
     list-style: none;
 
     > li {
+        padding-top: $spacing-unit;
         margin-bottom: $spacing-unit;
+        border-top: 1px solid #e8e8e8;
+
+        h2 {
+            font-weight: bold;
+        }
     }
 }
 
