@@ -61,15 +61,6 @@
                 width: 100%;
                 font-weight: bold;
                 font-size: 14px;
-
-                .header-links {
-                    padding: 0px 7px 0px 3px;
-                    border-right: 1px solid #CCC;
-
-                    &:last-child {
-                        border: none;
-                    }
-                }
             }
         }
     }
@@ -161,9 +152,12 @@
     list-style: none;
 
     > li {
-        padding-top: $spacing-unit;
         margin-bottom: $spacing-unit;
-        border-top: 1px solid #e8e8e8;
+
+        &:not(:first-child) {
+            padding-top: $spacing-unit;
+            border-top: 1px solid #e8e8e8;
+        }
 
         h2 {
             font-weight: bold;
