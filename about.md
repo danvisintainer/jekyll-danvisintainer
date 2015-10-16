@@ -2,10 +2,11 @@
 layout: page
 title: About
 permalink: /about/
+byline_override: Hi, I'm Dan
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+{% include big-image.html src="http://share.danvisintainer.com/jekyll-danvisintainer/20141122-DSCF2448.jpg" %}
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I'm a Junior Web Developer at SpinMedia most of the time. Other times, I'm an amateur photographer, and sometimes a musician. At all times, I'm a coffee addict.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I ran my site on Squarespace, then moved to WordPress, and now it's running on the great Jekyll. You can expect me to update this blog once per whenever.
