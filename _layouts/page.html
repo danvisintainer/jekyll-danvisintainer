@@ -4,7 +4,11 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.byline_override %}
+		<h1 class="post-title">{{ page.byline_override }}</h1>
+    {% else %}
+	    <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
   </header>
 
   <article class="post-content">
