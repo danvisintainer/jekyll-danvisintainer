@@ -6,23 +6,30 @@
 
 
 // Our variables
-$logo-font-family: 'Roboto Condensed', sans-serif;
-$base-font-family: 'Lato', Helvetica, sans-serif;
-$base-font-size:   22px;
+$logo-font-family: 'proxima-nova', sans-serif;
+$header-font-family: 'proxima-nova', sans-serif;
+$base-font-family: 'ff-tisa-web-pro', serif;
+$code-font-family: 'anonymous-pro', monospace;
+$base-font-size:   20px;
 $small-font-size:  $base-font-size * 0.875;
 $mobile-font-size:  $base-font-size * 0.75;
-$base-line-height: 1.5;
+$code-font-size:  $base-font-size * 0.875;
+$code-mobile-font-size:  $code-font-size * 0.75;
+$base-line-height: 1.7;
 $mobile-line-height:  $base-line-height * 0.75;
 
-$spacing-unit:     30px;
+$spacing-unit:     		30px;
+$mobile-spacing-unit:   15px;
 
 $text-color:       #222;
-$background-color: #F8F8F8;
+$background-color: #ecf0f1;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color:       #7f8c8d;
+$grey-color-light: lighten($grey-color, 25%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$link-color: #2982bb;
 
 // Width of the content area
 $content-width:    860px;

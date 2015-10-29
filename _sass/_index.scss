@@ -6,22 +6,25 @@
     overflow: hidden;
     text-align: center;
     text-transform: uppercase;
-    margin: 75px 0px;
+    padding: 75px 0px;
+    margin-bottom: $spacing-unit;
+    background: $text-color;
 
     .logo h1 {
         font-family: $logo-font-family, sans-serif;
-        color: $text-color;
+        color: $background-color;
         font-size: 64px;
-        letter-spacing: 8px;
+        letter-spacing: 10px;
     }
 
     .header-links {
-        font-weight: bold;
+        font-family: $logo-font-family, sans-serif;
+
         a {
             color: #888;
 
             &:hover {
-                color: $text-color;
+                color: $background-color;
                 text-decoration: none;
             }
         }
@@ -38,13 +41,34 @@
 
     @include media-query($on-phone) {
         .logo h1 {
-            letter-spacing: 1px;
-            font-size: 38px;
+            letter-spacing: 3px;
+            font-size: 30px;
         }
 
         .header-links {
             font-size: 14px;
         }
 
+    }
+}
+
+.home {
+    .post-list {
+        li {
+            h1 {
+                display: none;
+            }
+
+            h2 a {
+                font-size: $base-font-size + 12;
+                font-family: $logo-font-family;
+                font-weight: 500;
+
+                @include media-query($on-phone) {
+                    font-size: $mobile-font-size + 12;
+
+                }
+            }   
+        }
     }
 }

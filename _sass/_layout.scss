@@ -5,14 +5,16 @@
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
     text-transform: uppercase;
+    background: $text-color;
 
     .site-title {
+        letter-spacing: 3px;
         font-family: $logo-font-family;
         font-size: 26px;
         line-height: 56px;
         margin-bottom: 0;
         float: left;
-        color: $text-color;
+        color: $background-color;
 
         &:hover {
             text-decoration: none;
@@ -22,13 +24,15 @@
     .site-nav {
         float: right;
         line-height: 56px;
+        font-family: $logo-font-family, sans-serif;
+        font-weight: 200;
 
         .header-link {
             a {
                 color: #888;
 
                 &:hover {
-                    color: $text-color;
+                    color: $background-color;
                 }
             }
 
@@ -42,26 +46,25 @@
     }
 
     @include media-query($on-phone) {
-        .wrapper {
-            margin: 10px 0;
+        min-height: 56px;
+        padding: 10px 0;
 
-            & * {
-                line-height: inherit;
-            }
+        text-align: center;
 
-            text-align: center;
+        .site-title {
+            letter-spacing: 4px;
+            font-size: 24px;
+            line-height: normal;
+            width: 100%;
+            float: none;
+        }
 
-            .site-title {
-                width: 100%;
-                float: none;
-            }
-
-            .site-nav {
-                float: none;
-                width: 100%;
-                font-weight: bold;
-                font-size: 14px;
-            }
+        .site-nav {
+            line-height: normal;
+            float: none;
+            width: 100%;
+            font-weight: bold;
+            font-size: 14px;
         }
     }
 }
@@ -70,14 +73,46 @@
  * Site footer
  */
 .site-footer {
+    // background-color: $text-color;
+    // color: $background-color;
+    min-height: 56px;
+    line-height: 56px;
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+
+    @include media-query($on-phone) {
+        line-height: normal;
+    }
+
+    .footer-title {
+        display: inline-block;
+
+        @include media-query($on-phone) {
+            margin-top: $spacing-unit / 2;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-heading {
+            letter-spacing: 3px;
+            font-family: $logo-font-family;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    .footer-social-icons {
+        letter-spacing: 3px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        @include media-query($on-phone) {
+            margin: $mobile-spacing-unit 0;
+        }
+    }
 }
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
 
 .contact-list,
 .social-media-list {
@@ -140,7 +175,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: ($spacing-unit + ($spacing-unit / 2)) 0;
 }
 
 .page-heading {
@@ -156,19 +191,23 @@
 
         &:not(:first-child) {
             padding-top: $spacing-unit;
-            border-top: 1px solid #e8e8e8;
+            border-top: 1px solid $grey-color-light;
         }
 
         h2 {
-            font-weight: bold;
+            line-height: 1.5;
+            
+            a {
+                font-weight: 400;
+            }
+
+            @include media-query($on-phone) {
+                line-height: 1.2;
+            }
         }
     }
 }
 
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
 
 .post-link {
     display: block;
@@ -181,18 +220,50 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
-}
+    margin-bottom: $spacing-unit * 2;
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+    .post-title {
+        font-size: 52px;
+        letter-spacing: -1px;
+        margin-bottom: $spacing-unit / 2;
+        line-height: normal;
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
+        @include media-query($on-phone) {
+            font-size: 36px;
+        }
+    }
+
+    .post-subtitle {
+        padding-top: 0;
+        margin-bottom: $spacing-unit / 2;
+        font-size: 18px;
+        letter-spacing: 1.3px;
+        font-weight: 500;
+
+        @include media-query($on-phone) {
+            letter-spacing: normal;
+            font-size: 14px;
+        }
+    }
+
+    .post-meta {
+        font-family: $header-font-family;
+        font-size: $small-font-size;
+        color: $grey-color;
+        margin-bottom: $spacing-unit / 2;
+
+        @include media-query($on-phone) {
+            font-size: $small-font-size - 4;
+        }
+    }
+    .danhr {
+        height: 2px;
+        width: 60%;
+        margin: 10px 20%;
+        background-color: $text-color;
     }
 }
+
 
 .post-content {
     margin-bottom: $spacing-unit;
@@ -200,24 +271,24 @@
     h2 {
         font-size: 32px;
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
+        // @include media-query($on-laptop) {
+        //     font-size: 28px;
+        // }
     }
 
     h3 {
         font-size: 26px;
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+        // @include media-query($on-laptop) {
+        //     font-size: 22px;
+        // }
     }
 
     h4 {
         font-size: 20px;
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+        // @include media-query($on-laptop) {
+        //     font-size: 18px;
+        // }
     }
 }

@@ -1,34 +1,120 @@
 /**
  * Lose the wrapper so we can add some full-width stuff, e.g. images
  */
-.page-content, .post-content {
-    h2, h3, h4, pre, img, p:not(.post-meta), .post-header {
+.page-content {
+    article h1, h2, h3, h4, pre, ul, ol, table, hr, blockquote, p:not(.post-meta), .post-header, & > h1 {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
         max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: $spacing-unit;
+        margin-bottom: $spacing-unit + ($spacing-unit / 2);
         padding-right: $spacing-unit;
         padding-left: $spacing-unit;
         @extend %clearfix;
 
-        @include media-query($on-laptop) {
-            max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-            max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-            padding-right: $spacing-unit / 2;
-            padding-left: $spacing-unit / 2;
+        @include media-query($on-phone) {
+            padding-left: $mobile-spacing-unit;
+            padding-right: $mobile-spacing-unit;
+            margin-bottom: $mobile-spacing-unit * 2;
+        }
+
+        // @include media-query($on-laptop) {
+        //     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        //     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        //     padding-right: $spacing-unit / 2;
+        //     padding-left: $spacing-unit / 2;
+        // }
+    }
+
+    .post-header {
+        text-align: center;
+
+        h1 {
+            text-transform: none;
+            font-family: $header-font-family;
+            font-weight: 300;
+        }
+
+    }
+
+    article h1 {
+        margin-bottom: $spacing-unit / 2;
+    }
+
+    h1, h2, h3 {
+        font-family: $header-font-family;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: $spacing-unit;
+        padding-top: $spacing-unit;
+        line-height: 1.5;
+        letter-spacing: 1.3px;
+
+        @include media-query($on-phone) {
+            margin-bottom: $spacing-unit / 2;
+            padding-top: $spacing-unit / 2;
+            letter-spacing: normal;
         }
     }
 
-    pre {
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    h1 {
+        font-size: $base-font-size + 12;
+        @include media-query($on-phone) {
+            font-size: $mobile-font-size + 8;
+        }     
     }
 
     h2 {
-        padding-top: $spacing-unit;
+        font-size: $base-font-size + 6;
+
+        @include media-query($on-phone) {
+            font-size: $mobile-font-size + 6;
+        }
+    }
+
+    h3 {
+        font-size: $base-font-size + 4;
+
+        @include media-query($on-phone) {
+            font-size: $mobile-font-size + 4;
+        }
+    }
+
+    ol, ul {
+        padding-left: $spacing-unit * 2;
+
+        @include media-query($on-phone) {
+            padding-left: $spacing-unit;
+        }
+
+        ol, ul {
+            margin-bottom: 0;
+        }
+    }
+
+    blockquote {
+        border: 0;
+        margin-bottom: 0;
+
+        p {
+            font-size: $base-font-size - 2;
+            letter-spacing: normal;
+            border-left: 2px solid $grey-color;
+            padding-left: 0;
+            font-style: normal;
+            margin-bottom: 0;
+
+            @include media-query($on-phone) {
+                font-size: $mobile-font-size - 2;
+            }
+        }
+    }
+
+    .highlight {
+        background: $background-color;
     }
 }
+
 
 .big-image {
     // max-width: -webkit-calc(100% - (#{$spacing-unit} * 8));
@@ -54,14 +140,18 @@
     margin-left: auto;
     margin-bottom: $spacing-unit;
 
-    @include media-query($on-laptop) {
-        max-width: 100%;
-        min-width: 0%;
-    }
+    // @include media-query($on-laptop) {
+    //     max-width: 100%;
+    //     min-width: 0%;
+    // }
 
     img {
         max-width: 100%;
         padding: 0;
         margin: 0;
     }
+}
+
+.two-inline-images {
+    
 }
