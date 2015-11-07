@@ -29,7 +29,7 @@
     .post-header {
         text-align: center;
 
-        h1 {
+        h1.post-title {
             text-transform: none;
             font-family: $header-font-family;
             font-weight: 300;
@@ -38,14 +38,14 @@
     }
 
     article h1 {
-        margin-bottom: $spacing-unit / 2;
+        margin-bottom: $spacing-unit * .66;
     }
 
     h1, h2, h3 {
         font-family: $header-font-family;
         font-weight: 700;
         text-transform: uppercase;
-        margin-bottom: $spacing-unit;
+       margin-bottom: $spacing-unit * .66;
         padding-top: $spacing-unit;
         line-height: 1.5;
         letter-spacing: 1.3px;
@@ -65,7 +65,7 @@
     }
 
     h2 {
-        font-size: $base-font-size + 6;
+        font-size: $base-font-size + 8;
 
         @include media-query($on-phone) {
             font-size: $mobile-font-size + 6;
