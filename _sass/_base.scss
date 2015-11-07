@@ -93,16 +93,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $link-color;
+    color: $text-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($link-color, 15%);
-    }
-
     &:hover {
-        color: $text-color;
-        // text-decoration: underline;
+        color: $grey-color;
     }
 }
 
@@ -112,7 +107,6 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color-dark;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;

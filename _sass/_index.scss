@@ -6,13 +6,11 @@
     overflow: hidden;
     text-align: center;
     text-transform: uppercase;
-    padding: 75px 0px;
+    padding: 125px 0px;
     margin-bottom: $spacing-unit;
-    background: $text-color;
 
     .logo h1 {
         font-family: $logo-font-family, sans-serif;
-        color: $background-color;
         font-size: 64px;
         letter-spacing: 10px;
     }
@@ -21,10 +19,10 @@
         font-family: $logo-font-family, sans-serif;
 
         a {
-            color: #888;
+            color: $text-color;
 
             &:hover {
-                color: $background-color;
+                color: #888;
                 text-decoration: none;
             }
         }
@@ -40,6 +38,8 @@
     }
 
     @include media-query($on-phone) {
+        padding: 75px 0px;
+
         .logo h1 {
             letter-spacing: 3px;
             font-size: 30px;
@@ -48,13 +48,33 @@
         .header-links {
             font-size: 14px;
         }
-
     }
 }
 
 .home {
     .post-list {
-        li {
+        & > li {
+            h2 a.post-link {
+                &:hover {
+                    text-transform: none;
+                }
+            }
+
+            margin-bottom: $spacing-unit * 1.5;
+
+            @include media-query($on-phone) {
+                margin-bottom: $spacing-unit * 1.25;
+            }
+
+            &:not(:first-child) {
+                padding-top: $spacing-unit * 1.5;
+                // border-top: 1px solid $grey-color-light;
+
+                @include media-query($on-phone) {
+                    padding-top: $spacing-unit * 1.25;
+                }
+            }
+
             h1 {
                 display: none;
             }
@@ -69,6 +89,26 @@
 
                 }
             }   
+        }
+    }
+
+    .pagination {
+        padding-top: $spacing-unit * 1.5;
+        font-family: $logo-font-family;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+
+        a, span {
+            padding: 0px 5px;
+
+            i.left {
+                padding-right: 5px;   
+            }
+
+            i.right {
+                padding-left: 5px;   
+            }
         }
     }
 }
