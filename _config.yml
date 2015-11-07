@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.danvisintainer.com" # the base hostname & protocol for your site
 twitter_username: dviz
 github_username:  danvisintainer
+paginate: 8
 
 # Build settings
 markdown: kramdown

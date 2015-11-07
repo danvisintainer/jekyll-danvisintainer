@@ -7,7 +7,7 @@ layout: index
   <!-- <h1 class="page-heading">Posts</h1> -->
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
 
@@ -19,6 +19,20 @@ layout: index
       </li>
     {% endfor %}
   </ul>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous"><i class="left fa fa-caret-left"></i>Newer</a>
+    {% else %}
+      <!-- <span class="previous"><i class="fa fa-caret-left"></i>Newer</span> -->
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Older<i class="right fa fa-caret-right"></i></a>
+    {% else %}
+      <!-- <span class="next">Older<i class="fa fa-caret-right"></i></span> -->
+    {% endif %}
+  </div>
 
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
