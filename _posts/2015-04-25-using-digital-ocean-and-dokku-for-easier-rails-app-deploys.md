@@ -1,5 +1,4 @@
 ---
-id: 20
 title: Using Digital Ocean and Dokku for easier Rails app deploys
 author: danvisintainer
 layout: post

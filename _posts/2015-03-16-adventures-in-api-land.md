@@ -1,12 +1,7 @@
 ---
-id: 8
 title: Adventures in API-Land
 author: danvisintainer
 layout: post
-guid: http://www.danvisintainer.com/?p=8
-permalink: /?p=8
-categories:
-  - Uncategorized
 ---
 I think I worked myself up a little too much last week. I’d later find that others agreed, as several of my classmates at [Flatiron School][1] suggested that I lay low this weekend, and try not coding at all.
 
@@ -47,8 +42,7 @@ Another big suggestion I have is to **just explore, play around with it, fail, a
 
   * Rails and ActiveRecord go hand-in-hand, but that doesn’t mean they have to. In fact, if you build a Rails app that depends on ActiveRecord, you may run into some trouble when deploying it to Heroku (I know this because I did). Luckily, you can create a Rails app that doesn’t include ActiveRecord at all, like so:
     
-    <pre class="brush: ruby; title: ; notranslate" title="">rails new app_name -O 
-</pre>
+    <pre class="brush: ruby; title: ; notranslate" title="">rails new app_name -O</pre>
 
   * Supposedly, there is no way to store temporary files on a Heroku slice (using a free slice, anyway), so I had to move colorful#NYC to DigitalOcean. I also realized my Photoshop skills in the making of that site (I have zero Photoshop skills).
 
