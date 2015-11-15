@@ -54,6 +54,31 @@
 .home {
     .post-list {
         & > li {
+            .featured-image {
+                margin-bottom: $spacing-unit;
+
+                img {
+                    transition: all .25s ease-in-out;
+                    -moz-transition: all .25s ease-in-out;
+                    -webkit-transition: all .25s ease-in-out;
+
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+
+                    &:hover {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+                }
+
+                @include media-query($on-phone) {
+                    img {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+                }
+            }
+
             h2 a.post-link {
                 &:hover {
                     text-transform: none;
@@ -80,7 +105,7 @@
             }
 
             h2 a {
-                font-size: $base-font-size + 12;
+                font-size: $base-font-size + 14;
                 font-family: $logo-font-family;
                 font-weight: 500;
 
