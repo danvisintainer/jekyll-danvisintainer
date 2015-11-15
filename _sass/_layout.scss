@@ -90,10 +90,6 @@
     min-height: 56px;
     line-height: 56px;
 
-    .wrapper {
-        border-top: 1px solid $grey-color-light;
-    }
-
     @include media-query($on-phone) {
         line-height: normal;
     }
@@ -125,6 +121,8 @@
         text-align: center;
 
         @include media-query($on-phone) {
+            font-size: 18px;
+            padding: $spacing-unit 0;
             margin: $mobile-spacing-unit 0;
         }
     }
@@ -230,8 +228,8 @@
     .post-title {
         font-size: 52px;
         letter-spacing: -1px;
-        margin-bottom: $spacing-unit / 2;
         line-height: normal;
+        margin-bottom: 0;
 
         @include media-query($on-phone) {
             font-size: 38px;
@@ -240,10 +238,11 @@
 
     .post-subtitle {
         padding-top: 0;
-        margin-bottom: $spacing-unit / 2;
+        margin-top: $spacing-unit / 2;
         font-size: 20px;
         letter-spacing: 1.3px;
         font-weight: 500;
+        margin-bottom: 0;
 
         @include media-query($on-phone) {
             letter-spacing: normal;
@@ -255,7 +254,8 @@
         font-family: $header-font-family;
         font-size: $small-font-size;
         color: $grey-color;
-        margin-bottom: $spacing-unit / 2;
+        margin-top: $spacing-unit / 2;
+        margin-bottom: 0;
 
         @include media-query($on-phone) {
             font-size: $small-font-size - 4;

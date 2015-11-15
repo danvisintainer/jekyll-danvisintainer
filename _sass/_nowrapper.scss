@@ -2,7 +2,7 @@
  * Lose the wrapper so we can add some full-width stuff, e.g. images
  */
 .page-content {
-    article h1, h2, h3, h4, pre, ul, ol, table, hr, blockquote, p, .post-header, & > h1 {
+    article h1, h2, h3, h4, pre, table, hr, ol, ul, blockquote, p, .post-header, & > h1 {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
         max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
         margin-right: auto;
@@ -26,6 +26,19 @@
         // }
     }
 
+    div.featured-image {
+        margin-top: $spacing-unit * 2;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        max-width: 858px;
+        max-height: 572px;
+
+        @include media-query($on-phone) {
+            margin-top: $spacing-unit;
+        }
+    }
+
     a {
         border-bottom: 1px solid $grey-color;
 
@@ -44,6 +57,11 @@
             text-transform: none;
             font-family: $header-font-family;
             font-weight: 300;
+        }
+
+        @include media-query($on-phone) {
+            margin-bottom: $spacing-unit;
+            padding-top: $spacing-unit;
         }
     }
 
@@ -91,15 +109,19 @@
     }
 
     ol, ul {
-        padding-left: $spacing-unit * 2;
 
-        @include media-query($on-phone) {
-            padding-left: $spacing-unit;
+        li {
+            margin-left: $spacing-unit * 1.5;
+            ol, ul {
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+
+            @include media-query($on-phone) {
+                margin-left: $spacing-unit;
+            }
         }
 
-        ol, ul {
-            margin-bottom: 0;
-        }
     }
 
     blockquote {
@@ -111,6 +133,7 @@
             letter-spacing: normal;
             border-left: 2px solid $grey-color;
             padding-left: 15px;
+            padding-bottom: 5px;
             font-style: normal;
             margin-bottom: 0;
 
@@ -134,12 +157,16 @@
     max-width: $big-image-max-width;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit * 2;
 
     img {
         max-width: 100%;
         padding: 0;
         margin: 0;
+    }
+
+    @include media-query($on-phone) {
+        margin-bottom: $spacing-unit;
     }
 }
 
@@ -161,8 +188,4 @@
         padding: 0;
         margin: 0;
     }
-}
-
-.two-inline-images {
-    
 }
