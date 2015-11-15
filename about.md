@@ -5,7 +5,9 @@ permalink: /about/
 byline_override: Hi, I'm Dan
 ---
 
-{% include big-image.html src="http://share.danvisintainer.com/jekyll-danvisintainer/20141122-DSCF2448.jpg" %}
+<div class="circle-image">
+    <img src="http://share.danvisintainer.com/me-1447530956.jpg" alt="">
+</div>
 
 I'm a Junior Front-End Web Developer at [SpinMedia](http://www,spinmedia.com) most of the time. Other times, I'm an amateur photographer, and sometimes a musician. At all times, I'm a coffee addict.
 
