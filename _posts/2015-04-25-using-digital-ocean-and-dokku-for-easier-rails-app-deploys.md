@@ -6,7 +6,7 @@ date:   2015-04-25 21:52:32
 categories:
   - Uncategorized
 ---
-Heroku is a great service. It’s powering [some of][1] [my projects][2] as I type this. You cannot knock it for its ease of use in deploying web apps in many of today’s popular programming languages.
+Heroku is a great service. It’s powering some of my projects as I type this. You cannot knock it for its ease of use in deploying web apps in many of today’s popular programming languages.
 
 Unfortunately, Heroku’s free packages aren’t without limits. For example, [support for temporary file storage is really tricky.][3] There’s also [limited database storage][4].
 
