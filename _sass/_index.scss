@@ -11,8 +11,9 @@
 
     .logo h1 {
         font-family: $logo-font-family, sans-serif;
-        font-size: 64px;
+        font-size: 6vmax;
         letter-spacing: 10px;
+        letter-spacing: 1.3vw;
     }
 
     .header-links {
@@ -42,7 +43,7 @@
 
         .logo h1 {
             letter-spacing: 3px;
-            font-size: 30px;
+            font-size: 9vmin;
         }
 
         .header-links {
@@ -110,8 +111,7 @@
                 font-weight: 500;
 
                 @include media-query($on-phone) {
-                    font-size: $mobile-font-size + 12;
-
+                    font-size: $mobile-font-size + 8;
                 }
             }   
         }
