@@ -7,6 +7,7 @@ url: "http://www.danvisintainer.com" # the base hostname & protocol for your sit
 twitter_username: dviz
 github_username:  danvisintainer
 paginate: 8
+excerpt_separator: "<!-- more -->"
 
 # Build settings
 markdown: kramdown

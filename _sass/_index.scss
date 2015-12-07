@@ -113,6 +113,19 @@
                 @include media-query($on-phone) {
                     font-size: $mobile-font-size + 8;
                 }
+            .continue-reading {
+                padding-top: $spacing-unit / 2;
+                font-family: $logo-font-family;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 16px;
+                a {
+                    border: none;
+                }
+            }
+
+            ol, ul {
+                margin-bottom: $spacing-unit / 2;
             }   
         }
     }
