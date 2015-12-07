@@ -19,7 +19,7 @@ layout: index
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
 
-                {% if post.excerpt %}
+                {% if post.content contains site.excerpt_separator %}
                     {{ post.excerpt }}
 
                     <p class="continue-reading">
