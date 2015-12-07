@@ -1,6 +1,5 @@
 ---
 title: Using Digital Ocean and Dokku for easier Rails app deploys
-author: danvisintainer
 layout: post
 date:   2015-04-25 21:52:32
 categories:
@@ -8,11 +7,13 @@ categories:
 ---
 Heroku is a great service. It’s powering some of my projects as I type this. You cannot knock it for its ease of use in deploying web apps in many of today’s popular programming languages.
 
-Unfortunately, Heroku’s free packages aren’t without limits. For example, [support for temporary file storage is really tricky.][3] There’s also [limited database storage][4].
+Unfortunately, Heroku’s free packages aren’t without limits. For example, [support for temporary file storage is really tricky.](https://devcenter.heroku.com/articles/read-only-filesystem) There’s also [limited database storage](https://devcenter.heroku.com/articles/heroku-postgres-plans).
 
 Add all of these limitations together, and you may just wish you could host your app on your own server &#8211; there wouldn’t be any limits there! Now, setting up your own server requires a lot of technical elbow grease and know-how. And once you get that done, deploying your app is a whole other step. If only there was an easier way!
 
-Thankfully, there is. Enter [Dokku][5].
+Thankfully, there is. Enter [Dokku](https://github.com/progrium/dokku).
+
+<!-- more -->
 
 ## You say Heroku, I say Dokku
 
@@ -109,7 +110,5 @@ That should be all you need to get your app working on Dokku! You can now enjoy 
 
  [1]: http://markytwit.herokuapp.com
  [2]: http://colorfulnyc.herokuapp.com
- [3]: https://devcenter.heroku.com/articles/read-only-filesystem
- [4]: https://devcenter.heroku.com/articles/heroku-postgres-plans
- [5]: https://github.com/progrium/dokku
+ [4]: 
  [6]: http://www.digitalocean.com

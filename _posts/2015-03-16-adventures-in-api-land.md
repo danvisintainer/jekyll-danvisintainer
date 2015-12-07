@@ -3,9 +3,11 @@ title: Adventures in API-Land
 author: danvisintainer
 layout: post
 ---
-I think I worked myself up a little too much last week. I’d later find that others agreed, as several of my classmates at [Flatiron School][1] suggested that I lay low this weekend, and try not coding at all.
+I think I worked myself up a little too much last week. I’d later find that others agreed, as several of my classmates at [Flatiron School](http://www.flatironschool.com) suggested that I lay low this weekend, and try not coding at all.
 
 So, me in my infinite wisdom (is “infinite” the right word?), did the exact opposite &#8211; I made two Twitter web apps, and one for Instagram. They’re all quite simple and I’m fairly certain that other (and better) versions of these exist on the Internet, but I’ve always been interested in connecting with some of my favorite social networks.
+
+<!-- more -->
 
 You can visit the sites below (note that colorful#NYC is very slow), but I wanted to talk about what to expect when using API calls.
 
@@ -46,7 +48,6 @@ Another big suggestion I have is to **just explore, play around with it, fail, a
 
   * Supposedly, there is no way to store temporary files on a Heroku slice (using a free slice, anyway), so I had to move colorful#NYC to DigitalOcean. I also realized my Photoshop skills in the making of that site (I have zero Photoshop skills).
 
- [1]: http://www.flatironschool.com
  [2]: http://markytwit.herokuapp.com
  [3]: http://wtfsiuot.herokuapp.com
  [4]: http://colorfulnyc.danvisintainer.com

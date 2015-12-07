@@ -17,13 +17,64 @@
             padding-right: $mobile-spacing-unit;
             margin-bottom: $mobile-spacing-unit * 2;
         }
+    }
 
-        // @include media-query($on-laptop) {
-        //     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        //     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        //     padding-right: $spacing-unit / 2;
-        //     padding-left: $spacing-unit / 2;
-        // }
+    /**
+     * Posts
+     */
+    .post-header {
+        margin-bottom: $spacing-unit * 2;
+        padding-top: $spacing-unit * 2;
+        text-align: center;
+
+        .post-title {
+            padding-top: 0;
+            text-transform: uppercase;
+            font-family: $header-font-family;
+            font-weight: 500;
+            letter-spacing: 3px;
+            font-size: 36px;
+            line-height: normal;
+            margin-bottom: 0;
+
+            @include media-query($on-phone) {
+                font-size: 38px;
+                margin-bottom: $spacing-unit;
+                padding-top: $spacing-unit;
+            }
+        }
+
+        .post-subtitle {
+            padding-top: 0;
+            margin-top: $spacing-unit / 2;
+            font-size: 20px;
+            letter-spacing: 1.3px;
+            font-weight: 500;
+            margin-bottom: 0;
+
+            @include media-query($on-phone) {
+                letter-spacing: normal;
+                font-size: 16px;
+            }
+        }
+
+        .post-meta {
+            font-family: $header-font-family;
+            font-size: $small-font-size;
+            color: $grey-color;
+            margin-top: $spacing-unit / 2;
+            margin-bottom: 0;
+
+            @include media-query($on-phone) {
+                font-size: $small-font-size - 4;
+            }
+        }
+        .danhr {
+            height: 2px;
+            width: 60%;
+            margin: 10px 20%;
+            background-color: $text-color;
+        }
     }
 
     div.featured-image {
@@ -44,24 +95,6 @@
 
         &:hover {
             border: none;
-        }
-    }
-
-    .post-header {
-        margin-bottom: $spacing-unit * 2;
-        padding-top: $spacing-unit * 2;
-        text-align: center;
-
-        h1.post-title {
-            padding-top: 0;
-            text-transform: none;
-            font-family: $header-font-family;
-            font-weight: 300;
-        }
-
-        @include media-query($on-phone) {
-            margin-bottom: $spacing-unit;
-            padding-top: $spacing-unit;
         }
     }
 
