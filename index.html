@@ -16,7 +16,11 @@ layout: index
                 {% endif %}
 
                 <h2>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    {% if post.link %}
+                        <a class="post-link" href="{{ post.link }}"><i class="fa fa-caret-right"></i>  {{ post.title }}</a>
+                    {% else %}
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    {% endif %}
                 </h2>
 
                 {% if post.content contains site.excerpt_separator %}
