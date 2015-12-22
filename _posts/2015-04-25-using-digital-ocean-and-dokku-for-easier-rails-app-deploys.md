@@ -19,7 +19,7 @@ Thankfully, there is. Enter [Dokku](https://github.com/progrium/dokku).
 
 To give an extremely broad description of it, Dokku is a self-hosted Heroku. You can deploy your app using Git, just like Heroku, but you don’t have to deal with any of the limitations that come with free Heroku &#8211; since it’s running on your own server, the only limitations are those of your server.
 
-Here, I’ll walk you through getting a Ruby on Rails application up and running with Dokku. We’ll use [Digital Ocean][6] for the servers. I’ll assume you already have a Rails app made, that uses Postgres for its database, and that you have a Digital Ocean account. I also recommend you already have a personalized domain name (applying a subdomain to your Dokku app will work fine as well).
+Here, I’ll walk you through getting a Ruby on Rails application up and running with Dokku. We’ll use [Digital Ocean](http://www.digitalocean.com) for the servers. I’ll assume you already have a Rails app made, that uses Postgres for its database, and that you have a Digital Ocean account. I also recommend you already have a personalized domain name (applying a subdomain to your Dokku app will work fine as well).
 
 ## 1. Make your Droplet
 
@@ -107,8 +107,3 @@ In your terminal and while connected to your server with SSH, run this command t
 ## 6. Enjoy
 
 That should be all you need to get your app working on Dokku! You can now enjoy easier, simpler deploys, automatically-installed Rails gems, with no database or file limitations to be found.
-
- [1]: http://markytwit.herokuapp.com
- [2]: http://colorfulnyc.herokuapp.com
- [4]: 
- [6]: http://www.digitalocean.com
