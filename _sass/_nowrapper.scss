@@ -2,7 +2,7 @@
  * Lose the wrapper so we can add some full-width stuff, e.g. images
  */
 .page-content {
-    article h1, h2, h3, h4, pre, table, hr, ol, ul, blockquote, p, .post-header, #disqus_thread, & > h1 {
+    article h1, h2, h3, h4, pre, table, hr, ol, ul, blockquote, p, .post-header, & > h1 {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
         max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
         margin-right: auto;
@@ -117,8 +117,10 @@
         }
     }
 
-    article h1 {
-        margin-bottom: $spacing-unit * .66;
+    article {
+        h1 {
+            margin-bottom: $spacing-unit * .66;
+        }
     }
 
     h1, h2, h3 {
@@ -161,12 +163,18 @@
     }
 
     ol, ul {
-
         li {
             margin-left: $spacing-unit * 1.5;
+            margin-bottom: $spacing-unit;
+
             ol, ul {
                 padding-left: 0;
                 margin-bottom: 0;
+            }
+
+            p {
+                padding: 0px ($spacing-unit / 2);
+                margin-bottom: ($spacing-unit / 2);
             }
 
             @include media-query($on-phone) {
