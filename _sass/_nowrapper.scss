@@ -77,6 +77,25 @@
         }
     }
 
+    .footer-social-icons {
+        padding: $spacing-unit 0;
+        font-size: 32px;
+        letter-spacing: 3px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        a {
+            border: none;
+        }
+
+        @include media-query($on-phone) {
+            font-size: 24px;
+            padding: $spacing-unit 0;
+            margin: $mobile-spacing-unit 0;
+        }
+    }
+
     div.featured-image {
         margin-top: $spacing-unit * 2;
         margin-left: auto;

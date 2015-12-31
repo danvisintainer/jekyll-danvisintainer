@@ -108,23 +108,7 @@
             margin: 0;
         }
     }
-
-    .footer-social-icons {
-        padding: ($spacing-unit * 2) 0;
-        font-size: 24px;
-        letter-spacing: 3px;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-
-        @include media-query($on-phone) {
-            font-size: 18px;
-            padding: $spacing-unit 0;
-            margin: $mobile-spacing-unit 0;
-        }
-    }
 }
-
 
 .contact-list,
 .social-media-list {
