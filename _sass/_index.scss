@@ -9,11 +9,9 @@
     padding: 125px 0px;
     margin-bottom: $spacing-unit;
 
-    .logo h1 {
-        font-family: $logo-font-family, sans-serif;
-        font-size: 5vmax;
-        letter-spacing: 10px;
-        letter-spacing: 1.3vw;
+    .logo img {
+        max-height: 225px;
+        margin-bottom: $spacing-unit * 2;
     }
 
     .header-links {

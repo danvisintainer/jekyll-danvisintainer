@@ -1,6 +1,5 @@
 ---
 title: Adventures in API-Land
-author: danvisintainer
 layout: post
 ---
 I think I worked myself up a little too much last week. I’d later find that others agreed, as several of my classmates at [Flatiron School](http://www.flatironschool.com) suggested that I lay low this weekend, and try not coding at all.
