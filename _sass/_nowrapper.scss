@@ -2,7 +2,7 @@
  * Lose the wrapper so we can add some full-width stuff, e.g. images
  */
 .page-content {
-    article h1, h2, h3, h4, pre, table, hr, ol, ul, blockquote, p, .post-header, & > h1 {
+    article h1, h2, h3, h4, pre, table, hr, ol, ul, blockquote, p, .post-header, #disqus_thread, & > h1 {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
         max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
         margin-right: auto;
@@ -184,9 +184,6 @@
 
 
 .big-image {
-    // max-width: -webkit-calc(100% - (#{$spacing-unit} * 8));
-    // max-width:         calc(100% - (#{$spacing-unit} * 8));
-    // min-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width: $big-image-max-width;
     margin-right: auto;
     margin-left: auto;
@@ -211,17 +208,29 @@
     margin-left: auto;
     margin-bottom: $spacing-unit;
 
-    // @include media-query($on-laptop) {
-    //     max-width: 100%;
-    //     min-width: 0%;
-    // }
 
     img {
         max-width: 100%;
         padding: 0;
         margin: 0;
     }
+}
 
-.footer-logo img {
-    max-height: 20px;
+#disqus_thread {
+    padding-top: $spacing-unit * 2;
+}
+
+.footer-logo {
+    padding-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+
+    a {
+        border: none;
+
+        img {
+            max-height: 25px;
+        }    
+    }
+
+    
 }
