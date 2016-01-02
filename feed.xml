@@ -23,7 +23,7 @@ layout: null
             <title>{{ post.title | xml_escape }}</title>
             <description>
                 {% if post.featured-image %}
-                    &lt;img src=&quot;{{ post.featured-image }}&quot;&gt;
+                    &lt;![CDATA[<img src="{{ post.featured-image }}" alt="{{ post.title }}"/>]]&gt;
                 {% endif %}
                 {{ post.content | xml_escape }}
             </description>
