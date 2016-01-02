@@ -25,7 +25,7 @@ Here, I’ll walk you through getting a Ruby on Rails application up and running
 
 Log into Digital Ocean and make a new Droplet. I recommend a droplet with at least 1GB of RAM (the $10/month one). Scroll down to the “Select Image” section, click the “Applications” tab, and select the “Dokku” image, like so:
 
-<img src="http://www.danvisintainer.com/wp-content/uploads/2015/04/4-1024x819.jpg" alt="Digital Ocean&#039;s images" width="1000" height="800" class="aligncente size-large wp-image-24" />
+<img src="http://share.danvisintainer.com/jekyll-danvisintainer/2015/dokku/4.jpg" alt="Digital Ocean&#039;s images" />
 
 The Dokku image will give you a server droplet with Dokku pre-installed for you. Next, click “Create Droplet”.
 
@@ -33,7 +33,7 @@ The Dokku image will give you a server droplet with Dokku pre-installed for you.
 
 Once your droplet is created, you’ll get an email from Digital Ocean with your droplet’s IP address. Navigate to it in your web browser. You’ll see this screen:
 
-<img src="http://www.danvisintainer.com/wp-content/uploads/2015/04/1-1024x903.jpg" alt="The Dokku initial setup screen" width="1000" height="882" class="alignnone size-large wp-image-21" />
+<img src="http://share.danvisintainer.com/jekyll-danvisintainer/2015/dokku/1.jpg" alt="The Dokku initial setup screen" />
 
 First, you’ll need to copy your computer’s public SSH key. Go to your terminal and run this:
 
@@ -62,7 +62,7 @@ You can now push to Dokku, like so:
 
 If you’ve used Heroku before, you may find that Dokku’s output looks familiar:
 
-<img src="http://www.danvisintainer.com/wp-content/uploads/2015/04/2-1024x512.jpg" alt="Dokku&#039;s output" width="1000" height="500" class="alignnone size-large wp-image-22" />
+<img src="http://share.danvisintainer.com/jekyll-danvisintainer/2015/dokku/2.jpg" alt="Dokku&#039;s output" />
 
 ## 4. Get your database working
 
