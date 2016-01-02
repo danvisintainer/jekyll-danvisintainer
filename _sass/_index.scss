@@ -12,6 +12,10 @@
     .logo img {
         max-height: 225px;
         margin-bottom: $spacing-unit * 2;
+
+        @include media-query($on-phone) {
+            margin-bottom: $spacing-unit;
+        }
     }
 
     .header-links {
@@ -54,6 +58,9 @@
     .post-list {
         & > li {
             .featured-image {
+                width: 100%;
+                max-height: 600px;
+                overflow: hidden;
                 margin-bottom: $spacing-unit;
 
                 img {
@@ -81,7 +88,7 @@
             margin-bottom: $spacing-unit * 1.5;
 
             @include media-query($on-phone) {
-                margin-bottom: $spacing-unit * 1.25;
+                margin-bottom: $spacing-unit * 1.5;
             }
 
             &:not(:first-child) {
@@ -89,7 +96,7 @@
                 // border-top: 1px solid $grey-color-light;
 
                 @include media-query($on-phone) {
-                    padding-top: $spacing-unit * 1.25;
+                    padding-top: $spacing-unit * 1.5;
                 }
             }
 
@@ -100,12 +107,12 @@
             h2 a {
                 letter-spacing: 1.5px;
                 text-transform: uppercase;
-                font-size: $base-font-size + 6;
+                font-size: $base-font-size + 8;
                 font-family: $logo-font-family;
                 font-weight: 500;
 
                 @include media-query($on-phone) {
-                    font-size: $mobile-font-size + 4;
+                    font-size: $mobile-font-size + 7;
                 }
             }
 
