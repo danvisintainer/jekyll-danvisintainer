@@ -21,9 +21,13 @@ Jekyll::Hooks.register :posts, :post_render do |post|
                     src_digest = Digest::MD5.hexdigest(img.attr('src'))
 
                     unless hash[src_digest]
-                        hash[src_digest] = {}
-                        hash[src_digest]['size'] = FastImage.size(img.attr('src'))
-                        hash[src_digest]['ratio'] = hash[src_digest]['size'][0].to_f / hash[src_digest]['size'][1].to_f
+                        begin
+                            hash[src_digest] = {}
+                            hash[src_digest]['size'] = FastImage.size(img.attr('src'))
+                            hash[src_digest]['ratio'] = hash[src_digest]['size'][0].to_f / hash[src_digest]['size'][1].to_f
+                        rescue Exception => e
+                            puts "Couldn't fetch size for image " << img.attr('src') << ", due to error: " << e
+                        end
                     end
 
                     img['ratio'] = hash[src_digest]['ratio']
