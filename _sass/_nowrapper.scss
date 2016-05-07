@@ -215,6 +215,30 @@
     .highlight {
         background: $background-color;
     }
+
+    .photoset {
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+        max-width: 800px;
+        margin-bottom: $spacing-unit;
+
+        .row {
+            margin: 0px 0px 10px;
+            width: 100%;
+
+            img {
+                display: block;
+                float: left;
+
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
 }
 
 
