@@ -32,10 +32,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 $link-color: #2982bb;
 
 // Width of the content area
-$content-width:    860px;
+$content-width:    740px;
 
 $on-phone:          600px;
-$on-laptop:        860px;
+$on-laptop:        800px;
 
 $big-image-max-width: 1024px;
 
@@ -61,6 +61,10 @@ $big-image-max-width: 1024px;
         "base",
         "layout",
         "nowrapper",
+        "featured",
         "index",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "pswp-settings",
+        "pswp",
+        "pswp_ui"
 ;
