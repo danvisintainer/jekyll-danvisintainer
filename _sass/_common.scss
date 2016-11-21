@@ -19,6 +19,12 @@
     padding: 0;
     margin-left: 0;
     margin-right: 0;
+
+    @include media-query($desktop) {
+        max-width: $content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 body {
@@ -30,7 +36,12 @@ body {
     
     a {
         text-decoration: none;
-        border-bottom: 1px solid $gray-color;
+        border-bottom: 1px solid $dark-gray-color;
+
+        &:hover {
+            color: $dark-gray-color;
+            border-bottom: none;
+        }
     }
 
     p, * + p {
@@ -50,11 +61,14 @@ body {
     .site-header {
         @extend %centering-and-spacing;
         font-family: $header-font-family;
+        font-size: $base-font-size;
         text-transform: uppercase;
         text-align: center;
 
-        & > * {
-            display: inline-block;
+        @include media-query($desktop) {
+            & > * {
+                display: inline-block;
+            }
         }
 
         a {
@@ -63,8 +77,29 @@ body {
 
         .site-title {
             font-weight: 500;
-            font-size: $base-font-size * 1.25;
             letter-spacing: 3px;
+            text-align: center;
+            font-size: $base-font-size * 1.25;
+
+            @include media-query($desktop) {
+                font-weight: 500;
+                font-size: $base-font-size;
+                text-align: right;
+            }
+
+            a:hover {
+                color: $dark-gray-color;
+            }
+        }
+
+        .site-nav {
+            a {
+                color: $dark-gray-color;
+
+                &:hover {
+                    color: $text-color;
+                }
+            }
         }
     }
 
@@ -101,10 +136,16 @@ body {
 
         .featured-image {
             @extend %no-horizontal-spacing;
+            
+            margin-top: $spacing-unit * 2;
 
             img {
                 width: 100%;
                 height: auto;
+            }
+
+            @include media-query($desktop) {
+                margin-top: $spacing-unit * 3;
             }
         }
 
@@ -117,6 +158,9 @@ body {
             h1 {
                 margin: 0;
                 font-weight: 500;
+                font-size: $base-font-size * 1.5;
+                line-height: $base-line-height * 1.5;
+                letter-spacing: 2px;
             }
 
             p.post-meta {
@@ -343,4 +387,3 @@ body {
         }
     }
 }
-
