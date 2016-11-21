@@ -57,6 +57,10 @@ body {
             line-height: ($base-line-height * 1.12) + 2;
         }
     }
+
+    h1 {
+        font-family: $header-font-family;
+    }
     
     .site-header {
         @extend %centering-and-spacing;
@@ -82,7 +86,7 @@ body {
             font-size: $base-font-size * 1.25;
 
             @include media-query($desktop) {
-                font-weight: 500;
+                font-weight: bold;
                 font-size: $base-font-size;
                 text-align: right;
             }
@@ -109,13 +113,14 @@ body {
         text-align: center;
 
         .logo {
-            @extend %centering-and-spacing;
             margin-top: $spacing-unit * 2;
-            width: 240px;
-            height: auto;
+            margin: $spacing-unit auto 0px auto;
+            padding: 0px $spacing-unit;
+            max-width: 1000px;
 
-            @include media-query($desktop) {
-                width: 312px;
+            img {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -132,6 +137,15 @@ body {
     }
 
     .page-content {
+        h1.center {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 500;
+            @extend %centering-and-spacing;
+            margin-bottom: $spacing-unit * 2;
+        }
+
         line-height: $base-line-height;
 
         .featured-image {
@@ -154,6 +168,7 @@ body {
             font-family: $header-font-family;
             line-height: $base-line-height * 1.5;
             text-transform: uppercase;
+            margin-bottom: $spacing-unit * 1.5;
 
             h1 {
                 margin: 0;
@@ -161,12 +176,49 @@ body {
                 font-size: $base-font-size * 1.5;
                 line-height: $base-line-height * 1.5;
                 letter-spacing: 2px;
+
+                @include media-query($desktop) {
+                    font-size: $base-font-size * 2;
+                    line-height: $base-line-height * 2;
+                    text-align: center;
+                }
             }
 
             p.post-meta {
                 font-family: $header-font-family;
                 margin-top: $spacing-unit * 0.5;
                 padding: 0;
+
+                @include media-query($desktop) {
+                    margin-top: $spacing-unit * 0.75;
+                    text-align: center;
+                }
+            }
+        }
+
+        .circle-image {
+            height: 200px;
+            width: 200px;
+            margin: ($spacing-unit * 3) auto ($spacing-unit * 2);
+
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .footer-social-icons {
+            margin: ($spacing-unit * 2) 0;
+            font-size: $base-font-size * 1.5;
+            text-align: center;
+
+            a {
+                border: none;
+            }
+
+            @include media-query($desktop) {
+                font-size: $base-font-size * 2;
             }
         }
 

@@ -3,13 +3,15 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    {% if page.byline_override %}
-		<h1 class="post-title">{{ page.byline_override }}</h1>
-    {% else %}
-	    <h1 class="post-title">{{ page.title }}</h1>
-    {% endif %}
-  </header>
+  {% if page.hide_title != true %}
+    <header class="post-header">
+        {% if page.byline_override %}
+    		  <h1 class="post-title">{{ page.byline_override }}</h1>
+        {% else %}
+    	    <h1 class="post-title">{{ page.title }}</h1>
+        {% endif %}
+    </header>
+  {% endif %}
 
   <article class="post-content">
     {{ content }}
