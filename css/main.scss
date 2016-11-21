@@ -21,7 +21,7 @@ $gray-color: #bdc3c7;
 // Width of the content area
 $content-width: 800px;
 
-$on-phone: 600px;
+$desktop: 768px;
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -30,7 +30,7 @@ $on-phone: 600px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
